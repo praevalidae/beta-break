@@ -6,3 +6,58 @@
 body{
   margin: 0
 }
+
+/* Shimmering border animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-border {
+  position: relative;
+  padding: 4px;
+  background: linear-gradient(
+    45deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #ffeaa7,
+    #dda0dd,
+    #98d8c8,
+    #ff6b6b
+  );
+  background-size: 400% 400%;
+  animation: shimmer 3s ease-in-out infinite;
+  border-radius: calc(1rem + 4px);
+  overflow: hidden;
+}
+
+.shimmer-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.8)
+  );
+  background-size: 200% 200%;
+  animation: shimmer 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.shimmer-content {
+  position: relative;
+  z-index: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+}
