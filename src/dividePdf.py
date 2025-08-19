@@ -19,8 +19,8 @@ def slice_pdf_pages_with_margin(pdf_path, output_folder, margin_inches=1):
 
     # Assuming a standard print resolution of 300 DPI (dots per inch)
     dpi = 300
-    top_margin_pixels = int(0.75 * dpi)
-    side_margin_pixels = int(1.5 * dpi)
+    top_margin_pixels = int(0.62 * dpi)
+    side_margin_pixels = int(1.4 * dpi)
 
     for page_num in range(len(doc)):
         page = doc.load_page(page_num)
