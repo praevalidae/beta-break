@@ -13,8 +13,9 @@ const MainContainer = styled('div')({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  height: '100vh',
-  width: '100vw',
+  height: '150vh',
+  width: '150vw',
+  padding: "5rem"
 });
 
 const CardContainer = styled('div')({
