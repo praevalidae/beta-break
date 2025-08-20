@@ -30,7 +30,7 @@ const StyledImage = styled('img')({
   width: '100%',
   height: '100%',
   objectFit: 'contain',
-  borderRadius: '1rem',
+  borderRadius: '1.5rem',
 });
 
 const StyledImageWrapper = styled('div')({
@@ -49,7 +49,7 @@ const DialogImage = styled('img')({
   maxWidth: '100%',
   maxHeight: 'calc(100vh - 2rem)', // Account for padding
   objectFit: 'contain',
-  borderRadius: '1rem',
+  borderRadius: '1.5rem',
 });
 
 function App() {
